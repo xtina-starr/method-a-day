@@ -57,14 +57,17 @@ task "count_array_methods" => "ruby_rdoc" do
   pp store.load_method("Array", "#delete")
 end
 
+desc("get array methods")
 task "get_arr_methods" => %w[ruby_rdoc environment] do
   MethodName.get_methods("Array")
 end
 
+desc("get string methods")
 task "get_str_methods" => %w[ruby_rdoc environment] do
   MethodName.get_methods("String")
 end
 
+desc("get integer methods")
 task "get_int_methods" => %w[ruby_rdoc environment] do
   MethodName.get_methods("Integer")
 end
