@@ -25,8 +25,8 @@ class MethodName < ActiveRecord::Base
     end
   end
 
-  def self.get_arrays
-    
+  def url
+    "http://ruby-doc.org/core-2.1.0/#{self.link}"
   end
 
 end
