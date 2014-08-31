@@ -18,7 +18,7 @@ class MethodName < ActiveRecord::Base
     array_of_methods.each do |m|
       method = store.load_method(method_class, m)
 
-      MethodName.create(name: method.name, fullname: method.full_name, comment: to_html.convert(method.comment), link: "#{method_class}.html" + method.aref, kind: method_class.downcase)
+      MethodName.create(name: method.name, fullname: method.full_name, comment: to_html.convert(method.comment), link: "#{method_class}.html#" + method.aref, kind: method_class.downcase)
       # puts method.full_name
       # puts to_html.convert method.comment
       # puts "-------------------------------------"
@@ -26,7 +26,7 @@ class MethodName < ActiveRecord::Base
   end
 
   def url
-    "http://ruby-doc.org/core-2.1.0/#{self.link}"
+    "http://ruby-doc.org/core-2.1.0/" + self.link
   end
 
 end
