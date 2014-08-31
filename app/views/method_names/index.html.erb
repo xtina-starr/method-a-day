@@ -1,0 +1,33 @@
+<div class="content-wrapper">
+
+  <h1>Methods</h1>
+  <div class="all-methods">
+    <div class="array">
+      <h2>Arrays</h2>
+      <% @array_methods.each do |m| %>
+      <div>
+        <%= link_to "#" + m.name, method_path(m.id) %>
+      </div>
+      <% end %>
+    </div>
+
+    <div class="string">
+      <h2>Strings</h2>
+      <% @string_methods.each do |m| %>
+      <div>
+        <%= link_to "#" + m.name, method_path(m.id) %>
+      </div>
+      <% end %>
+    </div>
+
+    <div class="integer">
+      <h2>Integers</h2>
+      <% @integer_methods.each do |m| %>
+      <div>
+        <%= link_to "#" + m.name, method_path(m.id) %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+
+</div>

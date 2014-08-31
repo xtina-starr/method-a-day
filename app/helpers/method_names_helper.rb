@@ -1,0 +1,2 @@
+module MethodNamesHelper
+end
