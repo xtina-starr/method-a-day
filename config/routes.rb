@@ -1,5 +1,5 @@
 MethodADay::Application.routes.draw do
-  get "/", to: "welcome#index"
+  get "/", to: "welcome#index", as: :root
   get "/methods", to: "method_names#index"
   get "methods/:id", to: "method_names#show", as: :method
   resources :subscribers
